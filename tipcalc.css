@@ -18,6 +18,7 @@ body {
     ;
     height: 100vh;
     gap: 1%
+    
 }
 .digits {
     /* display: grid;
@@ -36,6 +37,7 @@ body {
     
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .mainDigitsContainer {
     display: flex;
@@ -187,14 +189,17 @@ button {
 .field1{
     display: flex;
     height: 100%;
-    width:100%;
+    width:25%;
     font-size: 30px;
+    color: black;
 }
-.field2{
+li {
     
     font-size: 30px;
     background-color:rgba(255, 0, 0, 0.4);
-    
+    border: 2px solid crimson;
+    border-radius: 5%;
+    padding: 3%;
     
     
 }
