@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='./tipcalc.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class='mainContainer'>
+
+        <div class='info'>
+
+        </div>
+        <!-- <div class='field'></div> -->
+        <div class='tipSuggestions'>
+            <ul class='field2'>
+                
+            </ul>
+        </div>
+        <div class='tipCalculator' name='tipCalculator'>
+       
+            <div class='digits' name='form'>
+                <input type='text' class='field1' name='field1'>
+                
+            </div>
+                <div class='mainDigitsContainer'>       
+                    <div class='digitsContainer1'>
+                        <div class='operand1'>
+                            <img src='./badservice.webp' onClick='badTip()' id='plus' >
+                            
+                            
+                        </div>
+                        <div class='operand2'>
+                            <img src='./okservice.webp' onClick='okTip()' id='subtract' >
+                            
+                            
+                        </div>
+                    </div>
+                    <div class='digitsContainer2'>
+                        <div class='operand3'>
+                            <img src='./goodservice.webp' onClick='goodTip()' id='divide' >
+                             
+                            
+                        </div>
+                        <div class='operand4'>
+                            <img src='./exceptionalservice.webp' onClick='exceptionalTip()' id='times' >
+                            
+                            
+                        </div>
+                    </div> 
+                </div>
+            
+        </div>
+        <div class='notes'>
+
+        </div>
+        <div class = 'history'  >
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+</body>
+<script>
+
+// function addValue1 () {
+//     var input = document.querySelector('.input')
+//     input.append('1')
+    
+// }
+// function addValue2 () {
+    
+//     var input = document.querySelector('.input')
+//     input.append('2')
+// }
+// function addValue3 () {
+    
+//     var input = document.querySelector('.input')
+//     input.append('3')
+// }
+// function addValue4 () {
+
+//     var input = document.querySelector('.input')
+//     input.append('4')
+// }
+// function addValue5 () {
+    
+//     var input = document.querySelector('.input')
+//     input.append('5')
+// }
+// function addValue6 () {
+
+//     var input = document.querySelector('.input')
+//     input.append('6')
+// }
+// function addValue7 () {
+
+//     var input = document.querySelector('.input')
+//     input.append('7')
+// }
+// function addValue8 () {
+
+//     var input = document.querySelector('.input')
+//     input.append('8')
+// }
+// function addValue9 () {
+
+//     var input = document.querySelector('.input')
+//     input.append('9')
+// }
+// function addValue0 () {
+
+//     var input = document.querySelector('.input')
+//     input.append('0')
+// }
+
+
+
+function badTip (){
+    const total = document.querySelector('.field1').value;
+    console.log(total)
+    const addTip = total *.10
+    console.log(addTip)
+    const field2=document.querySelector('.field2')
+    const field3 = document.createElement('li')
+    field2.append(field3)
+    const sum = Number(total) + Number(addTip)
+    field3.append(`POOR SERVICE?? TIP HER ${addTip.toFixed(2)} brining your total to ${sum.toFixed(2)}`)
+    
+}
+function okTip (){
+    const total = document.querySelector('.field1').value;
+    console.log(total)
+    const addTip = Number(total) * Number(.15)
+    console.log(addTip)
+    const field2=document.querySelector('.field2')
+    const field3 = document.createElement('li')
+    field2.append(field3)
+    const sum = Number(total) + Number(addTip)
+    field3.append(`We suggest you tip your server ${addTip.toFixed(2)} brining your total to ${sum.toFixed(2)}`)
+}
+function goodTip (){
+    const total = document.querySelector('.field1').value;
+    console.log(total)
+    const addTip = total *.20
+    console.log(addTip)
+    const field2=document.querySelector('.field2')
+    const field3 = document.createElement('li')
+    field2.append(field3)
+    const sum = Number(total) + Number(addTip)
+    field3.append(`We suggest you tip your server ${addTip.toFixed(2)} brining your total to ${sum.toFixed(2)}`)
+}
+function exceptionalTip (){
+    const total = document.querySelector('.field1').value;
+    console.log(total)
+    const addTip = total *.30
+    console.log(addTip)
+    const field2=document.querySelector('.field2')
+    const field3 = document.createElement('li')
+    field2.append(field3)
+    const sum = Number(total) + Number(addTip)
+    field3.append(`GREAT SERVICE? Tip big! ${addTip.toFixed(2)} brining your total to ${sum.toFixed(2)}`)
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
